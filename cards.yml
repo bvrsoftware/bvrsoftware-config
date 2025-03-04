@@ -2,7 +2,7 @@ build:
   version: "3.0"
 
 cards:
-  message: "Welcome to BvrBank cards related local APIs "
+  message: "Welcome to bvrBank cards related local APIs "
   contactDetails:
     name: "Dragos Lech - Developer"
     email: "dragos@bvrsoftware.com"
