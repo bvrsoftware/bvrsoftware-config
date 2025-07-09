@@ -9,3 +9,40 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: "http://localhost:8071/eureka/"
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "Bvr software Gateway Server Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      bvr:
+        gatewayserver:
+          GatewayserverApplication: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+
+
