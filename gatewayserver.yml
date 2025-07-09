@@ -19,7 +19,7 @@ management:
         include: "*"
   endpoint:
     gateway:
-      enabled: true
+      access: unrestricted     # ✅ fixed deprecated config
   info:
     env:
       enabled: true
@@ -37,12 +37,11 @@ logging:
         gatewayserver:
           GatewayserverApplication: DEBUG
 
-resilience4j.circuitbreaker:
-  configs:
-    default:
-      slidingWindowSize: 10
-      permittedNumberOfCallsInHalfOpenState: 2
-      failureRateThreshold: 50
-      waitDurationInOpenState: 10000
-
-
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 2
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s   # Optional: use readable time unit
