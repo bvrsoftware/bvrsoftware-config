@@ -1,0 +1,15 @@
+build:
+  version: "1.0"
+
+bvr-hospital:
+  message: "Welcome to Bvr software hospital service related local APIs "
+  contactDetails:
+    name: "Dragos Lech - Developer"
+    email: "dragos@bvrsoftware.com"
+  onCallSupport:
+    - (412) 419-3491
+    - (915) 382-1932
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/bvr1
