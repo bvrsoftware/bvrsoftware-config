@@ -1,0 +1,56 @@
+server:
+  port: 8075
+build:
+  version: "1.0"
+
+bvr-tracker:
+  message: "Welcome to Bvr software Tracker service related local APIs "
+  contactDetails:
+    name: "Dragos Lech - Developer"
+    email: "dragos@bvrsoftware.com"
+  onCallSupport:
+    - (412) 419-3491
+    - (915) 382-1932
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/bvr1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8071/eureka/
+
+info:
+  app:
+    name: "bvr-tracker"
+    description: "Bvr software Tracker Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      bvr:
+        BvrHospital: DEBUG
