@@ -1,0 +1,53 @@
+server:
+  port: 8076
+build:
+  version: "1.0"
+
+bvr-core:
+  message: "Welcome to Bvr software auth service related local APIs "
+  contactDetails:
+    name: "Amaal Grega - Developer"
+    email: "amaal@bvrsoftware.com"
+  onCallSupport:
+    - (452) 456-2176
+    - (546) 764-8934
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8071/eureka/
+
+info:
+  app:
+    name: "bvr-auth"
+    description: "Bvr software Auth Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      bvr:
+        BvrAuth: DEBUG
+
