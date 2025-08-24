@@ -14,7 +14,9 @@ bvr-tracker:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/bvr1
+      uri: mongodb://13.202.107.26:27017/bvr
+      username: ssp9448
+      password: 12345
 management:
   endpoints:
     web:
