@@ -49,3 +49,5 @@ info:
     name: "bvr-education"
     description: "Bvr software Education Application"
     version: "1.0.0"
+aws:
+  region: ap-southeast-1
