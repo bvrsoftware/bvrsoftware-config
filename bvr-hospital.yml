@@ -14,7 +14,7 @@ bvr-hospital:
 spring:
   data:
     mongodb:
-      uri: mongodb://ssp9448:12345@13.202.107.26:27017/bvr
+      uri: mongodb://localhost:27017/bvr
 management:
   endpoints:
     web:
